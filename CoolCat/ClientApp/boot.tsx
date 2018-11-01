@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import * as RoutesModule from './routes';
 let routes = RoutesModule.routes;
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/boostrap/dist/js/bootstrap.min.js';
 
 
 function renderApp() {
