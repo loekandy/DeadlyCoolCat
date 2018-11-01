@@ -8,7 +8,7 @@ export interface LayoutProps {
 export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
         return (<div>
-            <div className="container">Hej
+            <div className="container">Hejjjj
                 <div className="navbar-header">
                     <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span className="sr-only">Toggle navigation</span>
