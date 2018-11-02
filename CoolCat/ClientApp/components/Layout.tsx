@@ -9,7 +9,7 @@ export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
         return (<div>
             <div className="container">
-                <div className="navbar-header">Tomte
+                <div className="navbar-header">TomteDeluxe
                     <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span className="sr-only">Toggle navigation</span>
                         <span className="icon-bar"></span>
