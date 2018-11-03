@@ -64,3 +64,27 @@
         text-overflow: ellipsis;
     }
 }
+.slogan
+{
+    display:block;
+    float:right;
+    color:cadetblue;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+#topNav {
+    border-bottom: dashed #95a5a6 3px;
+}
+#first-section {
+    background-color: #34495e;
+    height: 500px;
+}
+#second-section {
+    background-color: #c0392b;
+    height: 500px;
+}
+#third-section {
+    background-color: #f39c12;
+    height: 500px;
+}
