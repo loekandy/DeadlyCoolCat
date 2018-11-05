@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { NavMenu } from './NavMenu';
+import Intro from './Intro';
 
 export interface LayoutProps {
     children?: React.ReactNode;
@@ -16,10 +17,11 @@ export class Layout extends React.Component<LayoutProps, {}> {
                             <div className="slogan">Deadly</div>
                         </div>
                     </nav>
-                    </div>
-                <div id="first-section"></div>
+                </div>
+                <Intro />
                 <div id="second-section"></div>
                 <div id="third-section"></div>
-            </div>);
+            </div>
+        );
     }
 }
