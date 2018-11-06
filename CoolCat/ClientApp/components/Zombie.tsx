@@ -1,10 +1,12 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-export default class Intro extends React.Component<{}, {}> {
+export default class Zombie extends React.Component<{}, {}> {
     public render() {
         return (<div>
+            
             <div className="zombie-container">
+                <div className="zombieText">Zombie.</div>
                 <div className="zombie">
                     <div className="ear left">
                     </div>
