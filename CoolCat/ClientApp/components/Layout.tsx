@@ -18,9 +18,9 @@ export class Layout extends React.Component<LayoutProps, {}> {
                         </div>
                     </nav>
                 </div>
-                <Intro />
-                <div id="second-section"></div>
-                <div id="third-section"></div>
+                <Intro />   //Random wiki query
+                <div id="second-section"></div> //WeatherApp
+                <div id="third-section"></div> //StarWars
             </div>
         );
     }
