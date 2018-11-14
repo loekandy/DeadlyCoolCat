@@ -6,7 +6,6 @@ export default class StarWars extends React.Component<{}, {}> {
         return (
             <div id="third-section">
                 <button type="button" className="btn btn-dark button">Press Me</button>
-                //Tomte
             </div>
         );
     }
