@@ -18,7 +18,7 @@ export default class QuotesMachine extends React.Component<{}, States> {
 
     getRandomQuote = () => {
         var quotes = {
-            "manyQuotes": [{
+            "coolQuotes": [{
                 "id": 1,
                 "from": "Albert Camus",
                 "content": "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend."
@@ -31,19 +31,16 @@ export default class QuotesMachine extends React.Component<{}, States> {
                 "from": "William Christopher Handy",
                 "content": "Nature was my kindergarten."
             },
-
             {
                 "id": 3,
                 "from": "Sophia Loren",
                 "content": "Spaghetti can be eaten most successfully if you inhale it like a vacuum cleaner. "
             },
-
             {
                 "id": 4,
                 "from": "Oscar Wilde",
                 "content": "Everything popular is wrong. "
             },
-
             {
                 "id": 5,
                 "from": "Nathaniel Hawthorne",
@@ -52,16 +49,20 @@ export default class QuotesMachine extends React.Component<{}, States> {
             ]
         };
 
+<<<<<<< HEAD
         var randomNumber = Math.floor(Math.random() * quotes.manyQuotes.length);
+=======
+        var randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
+>>>>>>> b562559360f9845c3b7fef80b1b4284d72cc7413
 
         while (this.state.quoteID == randomNumber) {
-            randomNumber = Math.floor(Math.random() * quotes.manyQuotes.length);
+            randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
         }
 
         this.setState({
-            currentQuoteContent: quotes.manyQuotes[randomNumber].content,
-            quoteID: quotes.manyQuotes[randomNumber].id,
-            quoteAuthor: quotes.manyQuotes[randomNumber].from
+            currentQuoteContent: quotes.coolQuotes[randomNumber].content,
+            quoteID: quotes.coolQuotes[randomNumber].id,
+            quoteAuthor: quotes.coolQuotes[randomNumber].from
         });
     }
 
@@ -83,6 +84,6 @@ export default class QuotesMachine extends React.Component<{}, States> {
                     <div id="quoteText">{quote}</div>
                 </div>
             </section>
-            </div>);
+        </div>);
     }
 }
