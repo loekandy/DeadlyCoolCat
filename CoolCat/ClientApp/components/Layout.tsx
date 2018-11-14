@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavMenu } from './NavMenu';
 import Zombie from './Zombie';
 import QuotesMachine from './QuotesMachine';
+import StarWars from './StarWars';
 
 export interface LayoutProps {
     children?: React.ReactNode;
@@ -21,7 +22,7 @@ export class Layout extends React.Component<LayoutProps, {}> {
                 </div>
                 <Zombie />
                 <QuotesMachine />
-                <div id="third-section"></div>
+                <StarWars />
             </div>
         );
     }

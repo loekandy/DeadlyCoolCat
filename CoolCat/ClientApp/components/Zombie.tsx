@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 export default class Zombie extends React.Component<{}, {}> {
     public render() {
         return (<div>
-            
             <div className="zombie-container">
                 <div className="zombieText">Zombie.</div>
                 <div className="zombie">

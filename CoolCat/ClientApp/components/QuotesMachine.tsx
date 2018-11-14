@@ -52,7 +52,6 @@ export default class QuotesMachine extends React.Component<{}, States> {
             ]
         };
 
-        debugger;
         var randomNumber = Math.floor(Math.random() * quotes.manyQuotes.length);
 
         while (this.state.quoteID == randomNumber) {
