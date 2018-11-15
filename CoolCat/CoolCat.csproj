@@ -12,6 +12,7 @@
     <None Remove="ClientApp\components\Loading.tsx" />
     <None Remove="ClientApp\components\QuotesMachine.tsx" />
     <None Remove="ClientApp\components\Zombie.tsx" />
+    <None Remove="ClientApp\modals\StarWarsModal.tsx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
     <TypeScriptCompile Include="ClientApp\components\Loading.tsx" />
     <TypeScriptCompile Include="ClientApp\components\QuotesMachine.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Zombie.tsx" />
+    <TypeScriptCompile Include="ClientApp\modals\StarWarsModal.tsx" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
