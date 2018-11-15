@@ -49,11 +49,7 @@ export default class QuotesMachine extends React.Component<{}, States> {
             ]
         };
 
-<<<<<<< HEAD
-        var randomNumber = Math.floor(Math.random() * quotes.manyQuotes.length);
-=======
         var randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
->>>>>>> b562559360f9845c3b7fef80b1b4284d72cc7413
 
         while (this.state.quoteID == randomNumber) {
             randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
@@ -76,14 +72,12 @@ export default class QuotesMachine extends React.Component<{}, States> {
             </div>
         }
 
-        return (<div>
-            <section id="second-section" className="wrapper">
-                <div className="inner">
-                    <h2>Random Quote Machine!</h2>
-                    <button onClick={this.getRandomQuote} type="button" className="btn btn-dark">Press Me</button>
-                    <div id="quoteText">{quote}</div>
-                </div>
-            </section>
+        return (<div className="wrapper">
+            <div className="inner">
+                <h2>Random Quote Machine!</h2>
+                <button onClick={this.getRandomQuote} type="button" className="btn btn-dark">Press Me</button>
+                <div id="quoteText">{quote}</div>
+            </div>
         </div>);
     }
 }

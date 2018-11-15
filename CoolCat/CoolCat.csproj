@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\components\FilterMyStuff.tsx" />
     <None Remove="ClientApp\components\QuotesMachine.tsx" />
     <None Remove="ClientApp\components\Zombie.tsx" />
   </ItemGroup>
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\FilterMyStuff.tsx" />
     <TypeScriptCompile Include="ClientApp\components\QuotesMachine.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Zombie.tsx" />
   </ItemGroup>

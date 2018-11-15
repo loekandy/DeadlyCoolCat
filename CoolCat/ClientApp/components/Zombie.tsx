@@ -1,6 +1,5 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Slick from 'react-slick';
 
 export default class Zombie extends React.Component<{}, {}> {
     public render() {

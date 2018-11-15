@@ -3,6 +3,7 @@ import { NavMenu } from './NavMenu';
 import Zombie from './Zombie';
 import QuotesMachine from './QuotesMachine';
 import StarWars from './StarWars';
+import FilterMyStuff from './FilterMyStuff';
 
 export interface LayoutProps {
     children?: React.ReactNode;
@@ -21,8 +22,15 @@ export class Layout extends React.Component<LayoutProps, {}> {
                     </nav>
                 </div>
                 <Zombie />
-                <QuotesMachine />
-                <StarWars />
+                <section id="second-section">
+                    <QuotesMachine />
+                </section>
+                <section id="third-section">
+                    <StarWars />
+                </section>
+                <section id="fourth-section">
+                    <FilterMyStuff />
+                </section>
             </div>
         );
     }
