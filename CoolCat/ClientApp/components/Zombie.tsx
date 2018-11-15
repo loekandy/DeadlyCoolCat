@@ -3,9 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default class Zombie extends React.Component<{}, {}> {
     public render() {
-        return (<div>
+        return (<div className="row">
+                <div className="col"></div>
+                <div className="col">
             <div className="zombie-container">
-                <div className="zombieText">Zombie.</div>
+                
                 <div className="zombie">
                     <div className="ear left">
                     </div>
@@ -41,7 +43,9 @@ export default class Zombie extends React.Component<{}, {}> {
                     <div className="ear right">
                     </div>
                 </div>
-            </div>
-        </div>);
-    }
+                    </div>
+                </div>
+                <div className="col zombieDiv"><div className="zombieText">Zombie.</div></div>
+            </div>);
+}
 }

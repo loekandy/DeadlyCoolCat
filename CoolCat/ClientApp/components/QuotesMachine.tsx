@@ -2,20 +2,16 @@
 import Loading from './Loading';
 
 interface States {
-    currentQuoteContent: string;
-    quoteID: number;
-    quoteAuthor: string;
     isLoading: boolean;
+    fetchRandomPost: boolean;
 }
 
 export default class QuotesMachine extends React.Component<{}, States> {
     constructor() {
         super();
         this.state = {
-            currentQuoteContent: "",
-            quoteID: 0,
-            quoteAuthor: "",
-            isLoading: true
+            isLoading: false,
+            fetchRandomPost: false
         };
     }
 
@@ -54,48 +50,44 @@ export default class QuotesMachine extends React.Component<{}, States> {
 
         var randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
 
-        while (this.state.quoteID == randomNumber) {
-            randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
-        }
-
-        this.setState({
-            currentQuoteContent: quotes.coolQuotes[randomNumber].content,
-            quoteID: quotes.coolQuotes[randomNumber].id,
-            quoteAuthor: quotes.coolQuotes[randomNumber].from
-        });
+        return quotes.coolQuotes[randomNumber].content;
     }
 
-    componentDidMount()
-    {
+    fakeLoadingScreen = () => {
+        this.setState({
+            isLoading: true
+        });
+
         setTimeout(() => {
             this.setState({
-                isLoading: false
-            }, );
+                isLoading: false,
+                fetchRandomPost: true
+            });
         }, 3500);
     }
 
+    componentDidUpdate() {
+
+    }
+
     render() {
-        const { isLoading } = this.state;
+        const { isLoading, fetchRandomPost } = this.state;
 
-        if (isLoading) {
-            return <Loading />;
-        }
-        else {
-            let quote;
-            if (this.state.currentQuoteContent != "") {
-                quote = <div>
-                    <div>{this.state.currentQuoteContent}</div>
-                    <div className="author">- {this.state.quoteAuthor}</div>
-                </div>
-            }
+        let quote;
 
-            return (<div className="wrapper">
-                <div className="inner">
-                    <h2>Random Quote Machine!</h2>
-                    <button onClick={this.getRandomQuote} type="button" className="btn btn-dark">Press Me</button>
-                    <div id="quoteText">{quote}</div>
-                </div>
-            </div>);
+        if (isLoading == true) {
+            quote = <Loading />;
         }
+        else if (fetchRandomPost == true) {
+            quote = this.getRandomQuote();
+        }
+
+        return (<div className="wrapper">
+            <div className="inner">
+                <h2>Random Quote Machine!</h2>
+                <button onClick={this.fakeLoadingScreen} type="button" className="btn btn-dark">Press Me</button>
+                <div id="quoteText">{quote}</div>
+            </div>
+        </div>);
     }
 }

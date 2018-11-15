@@ -21,7 +21,9 @@ export class Layout extends React.Component<LayoutProps, {}> {
                         </div>
                     </nav>
                 </div>
-                <Zombie />
+                <section id="first-section">
+                    <Zombie />
+                </section>
                 <section id="second-section">
                     <QuotesMachine />
                 </section>
