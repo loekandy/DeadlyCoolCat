@@ -1,9 +1,11 @@
 ﻿import * as React from 'react';
+import Loading from './Loading';
 
 interface States {
     currentQuoteContent: string;
     quoteID: number;
     quoteAuthor: string;
+    isLoading: boolean;
 }
 
 export default class QuotesMachine extends React.Component<{}, States> {
@@ -12,7 +14,8 @@ export default class QuotesMachine extends React.Component<{}, States> {
         this.state = {
             currentQuoteContent: "",
             quoteID: 0,
-            quoteAuthor: ""
+            quoteAuthor: "",
+            isLoading: true
         };
     }
 
@@ -62,22 +65,37 @@ export default class QuotesMachine extends React.Component<{}, States> {
         });
     }
 
+    componentDidMount()
+    {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            }, );
+        }, 3500);
+    }
+
     render() {
+        const { isLoading } = this.state;
 
-        let quote;
-        if (this.state.currentQuoteContent != "") {
-            quote = <div>
-                <div>{this.state.currentQuoteContent}</div>
-                <div className="author">- {this.state.quoteAuthor}</div>
-            </div>
+        if (isLoading) {
+            return <Loading />;
         }
+        else {
+            let quote;
+            if (this.state.currentQuoteContent != "") {
+                quote = <div>
+                    <div>{this.state.currentQuoteContent}</div>
+                    <div className="author">- {this.state.quoteAuthor}</div>
+                </div>
+            }
 
-        return (<div className="wrapper">
-            <div className="inner">
-                <h2>Random Quote Machine!</h2>
-                <button onClick={this.getRandomQuote} type="button" className="btn btn-dark">Press Me</button>
-                <div id="quoteText">{quote}</div>
-            </div>
-        </div>);
+            return (<div className="wrapper">
+                <div className="inner">
+                    <h2>Random Quote Machine!</h2>
+                    <button onClick={this.getRandomQuote} type="button" className="btn btn-dark">Press Me</button>
+                    <div id="quoteText">{quote}</div>
+                </div>
+            </div>);
+        }
     }
 }
