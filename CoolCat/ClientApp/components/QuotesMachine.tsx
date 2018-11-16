@@ -50,7 +50,14 @@ export default class QuotesMachine extends React.Component<{}, States> {
 
         var randomNumber = Math.floor(Math.random() * quotes.coolQuotes.length);
 
-        return quotes.coolQuotes[randomNumber].content;
+        const quote = quotes.coolQuotes[randomNumber];
+
+        const quoteMockup = <div>
+            <h2>{quote.content}</h2>
+            <h3>-{quote.from}</h3>
+        </div>
+
+        return quoteMockup;
     }
 
     fakeLoadingScreen = () => {
@@ -85,7 +92,7 @@ export default class QuotesMachine extends React.Component<{}, States> {
         return (<div className="wrapper">
             <div className="inner">
                 <h2>Random Quote Machine!</h2>
-                <button onClick={this.fakeLoadingScreen} type="button" className="btn btn-dark">Press Me</button>
+                <button onClick={this.fakeLoadingScreen} type="button" className="btn btn-dark btn-lg mt-4">Press Me</button>
                 <div id="quoteText">{quote}</div>
             </div>
         </div>);

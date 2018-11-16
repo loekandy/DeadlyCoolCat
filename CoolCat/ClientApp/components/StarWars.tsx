@@ -27,15 +27,23 @@ export default class StarWars extends React.Component<{}, States> {
 
 
     outputStarWarsFacts = (item: StarWarsModal) => {
-        return (<div className="p-5">
-            <h2>{item.name}</h2>
-            <h4>{item.manufacturer}</h4>
-            <p>{item.starship_class}</p>
-            <p>{item.manufacturer}</p>
-            <p>Hyperdrive Rating {item.hyperdrive_rating}</p>
-            <p>Cost {item.cost_in_credits}</p>
-            <p>Passengers {item.passengers}</p>
-        </div>);
+        return (
+            <div className="row">
+                <div className="col d-flex align-items-center justify-content-end">
+                    <h1>{item.name}</h1>
+
+                </div>
+                <div className="col">
+                    <div className="p-5">
+                        <h4>{item.manufacturer}</h4>
+                        <p>{item.starship_class}</p>
+                        <p>{item.manufacturer}</p>
+                        <p>Hyperdrive Rating {item.hyperdrive_rating}</p>
+                        <p>Cost {item.cost_in_credits}</p>
+                        <p>Passengers {item.passengers}</p>
+                    </div>
+                </div>
+            </div>);
     }
 
     public render() {
@@ -46,14 +54,16 @@ export default class StarWars extends React.Component<{}, States> {
 
         if (response) {
             console.log(response);
-            SWFacts = this.outputStarWarsFacts(response);    
+            SWFacts = this.outputStarWarsFacts(response);
 
         }
 
         return (
             <div>
                 {SWFacts}
-                <button type="button" className="btn btn-dark button ">Randomzie!</button>
+                <div className="text-center p-3">
+                    <button type="button" className="btn btn-dark button ">Randomzie!</button>
+                    </div>
             </div>
         );
     }
