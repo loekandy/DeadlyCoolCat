@@ -2,7 +2,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import Loading from './Loading';
 import ReactTable from 'react-table';
-import 'react-table/react-table.css'
 
 
 export default class FilterMyStuff extends React.Component<{}, {}> {
