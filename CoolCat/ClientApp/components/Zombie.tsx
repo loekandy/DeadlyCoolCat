@@ -1,30 +1,102 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
-import "./index.css";
 
 export default class Zombie extends React.Component<{}, {}> {
     render() {
-        var settings = {
-            dots: true
-        };
-        return (
-            <div className="container">
-                <Slider {...settings}>
-                    <div>
-                        <img src="http://placekitten.com/g/400/200" />
-                    </div>
-                    <div>
-                        <img src="http://placekitten.com/g/400/200" />
-                    </div>
-                    <div>
-                        <img src="http://placekitten.com/g/400/200" />
-                    </div>
-                    <div>
-                        <img src="http://placekitten.com/g/400/200" />
-                    </div>
-                </Slider>
+        //var settings = {
+        //    dots: true
+        //};
+        //return (
+        //    <div className="container">
+        //        <Slider {...settings}>
+        //            <div>
+        //                <img src="http://placekitten.com/g/400/200" />
+        //            </div>
+        //            <div>
+        //                <img src="http://placekitten.com/g/400/200" />
+        //            </div>
+        //            <div>
+        //                <img src="http://placekitten.com/g/400/200" />
+        //            </div>
+        //            <div>
+        //                <img src="http://placekitten.com/g/400/200" />
+        //            </div>
+        //        </Slider>
+        //    </div>
+        //);
+
+        const zombie = (<div className="zombie-container">
+            <div className="zombie">
+            <div className="ear left">
             </div>
+            <div className="head">
+                <div className="upper-part">
+                    <div className="scars upper">
+                        <div className="scar"></div>
+                    </div>
+                    <div className="features">
+                        <div className="eyes">
+                            <div className="eye left">
+                                <div className="pupil">
+                                    <div className="iris"></div>
+                                </div>
+                            </div>
+                            <div className="eye right">
+                                <div className="pupil">
+                                    <div className="iris"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mouth">
+                            <div className="tooth top right"></div>
+                            <div className="tooth top left"></div>
+                            <div className="tooth bottom center"></div>
+                        </div>
+                    </div>
+                    <div className="scars bottom">
+                        <div className="clip-scar"></div>
+                    </div>
+                </div>
+            </div>
+            <div className="ear right">
+            </div>
+            </div>
+            </div>);
+
+
+        const stuff = "";
+
+        return (
+            <div id="demo" className="carousel slide" data-ride="carousel" data-interval="100000">
+                <ul className="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" className="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        {zombie}
+                        <div className="carousel-caption">
+                            <h4>Zombie</h4>
+                            <p>Arrrgghhhh braaaaaainnnss!</p>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="http://placekitten.com/g/400/200" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="http://placekitten.com/g/400/200" />
+                    </div>
+                </div>
+
+                <a className="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span className="carousel-control-prev-icon"></span>
+                </a>
+                <a className="carousel-control-next" href="#demo" data-slide="next">
+                    <span className="carousel-control-next-icon"></span>
+                </a>
+            </div >
         );
     }
 }
