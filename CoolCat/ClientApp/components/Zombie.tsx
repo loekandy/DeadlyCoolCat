@@ -1,6 +1,5 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Slider from 'react-slick';
 
 export default class Zombie extends React.Component<{}, {}> {
     render() {
@@ -65,7 +64,37 @@ export default class Zombie extends React.Component<{}, {}> {
             </div>);
 
 
-        const stuff = "";
+        const santa = (<div id='canvas'>
+            <div id='headSanta'>
+                <div id='hatSanta'>
+                    <div id='hat_topSanta'></div>
+                    <div id='hat_bottomSanta'></div>
+                </div>
+                <div id='faceSanta'>
+                    <div id='eyes_noseSanta'>
+                        <div id='eye_leftSanta' className='eyesSanta'></div>
+                        <div id='noseSanta'></div>
+                        <div id='eye_rightSanta' className='eyesSanta'></div>
+                    </div>
+                </div>
+                <div id='beardSanta'></div>
+            </div>
+            <div id='body'>
+                <div id='torsoSanta'>
+                    <div id='torso_bottomSanta'></div>
+                </div>
+                <div id='arm_leftSanta'>
+                    <div id='hand_leftSanta'></div>
+                </div>
+                <div id='arm_rightSanta'>
+                    <div id='hand_rightSanta'></div>
+                </div>
+            </div>
+            <div id='legsSanta'>
+                <div id='leg_leftSanta'></div>
+                <div id='leg_rightSanta'></div>
+            </div>
+        </div>);
 
         return (
             <div id="demo" className="carousel slide" data-ride="carousel" data-interval="100000">
@@ -83,7 +112,7 @@ export default class Zombie extends React.Component<{}, {}> {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="http://placekitten.com/g/400/200" />
+                        {santa}
                     </div>
                     <div className="carousel-item">
                         <img src="http://placekitten.com/g/400/200" />
@@ -96,7 +125,7 @@ export default class Zombie extends React.Component<{}, {}> {
                 <a className="carousel-control-next" href="#demo" data-slide="next">
                     <span className="carousel-control-next-icon"></span>
                 </a>
-            </div >
+            </div>
         );
     }
 }

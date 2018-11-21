@@ -33,7 +33,6 @@
     "typescript": "2.4.1",
     "url-loader": "0.5.9",
     "webpack": "2.5.1",
-    "webpack-hot-middleware": "2.18.2",
-    "react-slick": "0.23.2"
+    "webpack-hot-middleware": "2.18.2"
   }
 }
