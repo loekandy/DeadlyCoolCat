@@ -4,6 +4,8 @@ import Zombie from './Zombie';
 import QuotesMachine from './QuotesMachine';
 import StarWars from './StarWars';
 import FilterMyStuff from './FilterMyStuff';
+import Nav from './Nav';
+
 
 export interface LayoutProps {
     children?: React.ReactNode;
@@ -13,14 +15,8 @@ export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
         return (
             <div>
-                <div id="topNav">
-                <nav className="navbar navbar-expand-lg navbar-dark navbar-static-top">
-                        <div>
-                            <div className="display-4 text-dark">Coolcat</div>
-                            <div className="slogan">Deadly</div>
-                        </div>
-                    </nav>
-                </div>
+                <Nav />
+               
                 <section id="first-section">
                     <Zombie />
                 </section>

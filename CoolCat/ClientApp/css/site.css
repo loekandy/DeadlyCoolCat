@@ -1,9 +1,21 @@
 @import "zombie.css";
 @import "santa.css";
 
-/* Loading CSS */
-@keyframes spin {
-    0% {
+.site-header {
+    background-color: #2d3436;
+}
+
+    .site-header a, a:hover {
+        color: #ecf0f1;
+    }
+        .site-header a:hover {
+            color: #ecf0f1;
+            font-weight: 900;
+            border-bottom: none;
+        }
+        /* Loading CSS */
+        @keyframes spin {
+            0% {
         transform: rotate(0deg);
     }
 
@@ -129,7 +141,7 @@
 }
 
 #topNav {
-    border-bottom: dashed #95a5a6 3px;
+    border-bottom: dashed #95a5a6 1px;
     background-color: #f5f6fa;
 }
 
@@ -149,20 +161,22 @@
         text-align: center;
         font-family: 'Dancing Script', cursive;
     }
+
     #second-section h2 {
         font-size: 45px;
         font-weight: 900;
     }
-    .button {
-        font-size: 25px;
-        padding: 15px;
-        border: 2px groove #666;
-        font-weight: 900;
-    }
 
-    #third-section {
-        background-color: #f39c12;
-    }
+.button {
+    font-size: 25px;
+    padding: 15px;
+    border: 2px groove #666;
+    font-weight: 900;
+}
+
+#third-section {
+    background-color: #f39c12;
+}
 
 .zombieText {
     font-family: 'Pacifico', cursive;
@@ -171,14 +185,15 @@
     /*right: 180px;
     position: absolute;*/
 }
+
 #quoteText {
     font-size: 45px;
     font-weight: 100;
 }
-#quoteText .author 
-{
-    font-size: 25px;
-}
+
+    #quoteText .author {
+        font-size: 25px;
+    }
 
 #fourth-section {
     background-color: #27ae60;

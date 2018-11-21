@@ -113,6 +113,10 @@ export default class Zombie extends React.Component<{}, {}> {
                     </div>
                     <div className="carousel-item">
                         {santa}
+                        <div className="carousel-caption">
+                            <h4>Santa</h4>
+                            <p>North Pole 1, Imaginationland.</p>
+                        </div>
                     </div>
                     <div className="carousel-item">
                         <img src="http://placekitten.com/g/400/200" />
