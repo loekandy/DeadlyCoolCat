@@ -101,6 +101,7 @@ export default class QuotesMachine extends React.Component<{}, States> {
         return (<div className="wrapper">
             <div className="inner">
                 <h2>Random Quote Machine!</h2>
+                
                 <button onClick={this.fakeLoadingScreen} type="button" className="btn btn-dark btn-lg mt-4">Press Me</button>
                 <div id="quoteText">{quote}</div>
             </div>

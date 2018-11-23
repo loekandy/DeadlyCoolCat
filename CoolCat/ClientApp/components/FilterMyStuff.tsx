@@ -1,24 +1,16 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Loading from './Loading';
-import ReactTable from 'react-table';
-
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import XYZ from 'ol/source/XYZ';
 
 export default class FilterMyStuff extends React.Component<{}, {}> {
     render() {
-        const data = [{
-            firstName: 'Tanner',
-            lastName: 'Linsley',
-            age: 26,
-            friend: {
-                name: 'Jason Maurer',
-                age: 23,
-            },
-            status: "unclear",
-            visits: 1337,
-            tomte: true
-        }];
-
-        return <div>Hej</div>
+        return (<div>
+            <div id="map" className="map"></div>
+            <div id="info"></div>
+        </div>);
     }
 }
